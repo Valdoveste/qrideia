@@ -1,16 +1,21 @@
-footer{
+footer,
+footer ul {
+    @include flexCenter(center, center, row);
+}
+
+footer {
     height: 60px;
     background-color: #000;
-    @include flexCenter(center, center, row);
-    ul{
-        @include flexCenter(center, center, row);
+    ul {
 
-        li:first-child > a{
+        li:first-child > a {
             margin-right: 10px;
         }
 
-        li:last-child{
-            color: rgb(192, 186, 178);
+        li:last-child {
+            color: #c0bab2;
         }
+        
     }
+
 }

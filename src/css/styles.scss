@@ -18,10 +18,6 @@
     flex-direction: $flex_direction;
 }
 
-body, html, #root{
-    height: 100vh;
-}
-
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
@@ -33,11 +29,10 @@ header {
     background-color: #ffffff;
 }
 
-a{
-    color: #db7a08;
-}
+body{ height: 100%; }
 
-@import './_App.scss';
+a{ color: #db7a08; }
+
 @import './_Main.scss';
 @import './_Header.scss';
 @import './_Footer.scss';

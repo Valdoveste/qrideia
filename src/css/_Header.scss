@@ -1,37 +1,54 @@
+header,
+header ul:last-child li {
+    @include flexCenter(center, center, row);
+}
+
 header {
     padding: 50px 0;
     background-color: #fff;
 
     nav {
-        width: 100%;
-        min-width: 800px;
-        @include flexCenter(center, space-evenly, row);
+        min-width: 1120px;
+        @include flexCenter(center, space-between, row);
 
         ul:nth-child(even) {
             display: flex;
+
             li {
-                a{
-                    color: #818181 !important;
+                padding: 0 1.5rem;
+
+                a {
+                    color: #818181;
                     transition: color 500ms ease-out;
 
                     &:hover {
                         color: #000000 !important;
                     }
+
+                    a.active{
+                        color: orangered;
+                    }
+
                 }
-                padding: 0 1.5rem;
+
             }
+            
         }
 
-        ul:last-child li {
-            @include flexCenter(center, center, row);
-            article {
-                margin-left: 10px;
-                a {
-                    float: right;
-                    text-decoration: underline;
-                }
+        ul:last-child li article {
+            margin-left: 10px;
+
+            p {
+                color: black;
             }
+
+            a {
+                float: right;
+                text-decoration: underline;
+            }
+
         }
+
     }
 
 }
